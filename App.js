@@ -3,7 +3,11 @@ import { View, Switch, StyleSheet, SafeAreaView, Text } from "react-native";
 
 const App = () => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch1 = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch2 = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch3 = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch4 = () => setIsEnabled(previousState => !previousState);
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -11,13 +15,13 @@ const App = () => {
         <Text style={styles.controles}>Controles</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.menu}>
-      <Text style={styles.acionamentos}>Luz</Text>
+      <Text style={styles.acionamentos}>Luzes</Text>
       <Switch
         style={styles.botao}
         trackColor={{ false: "#767577", true: "#81b0ff" }}
         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
+        onValueChange={toggleSwitch1}
         value={isEnabled}/>
       <Text style={styles.acionamentos}>Porta</Text>
       <Switch
@@ -25,23 +29,23 @@ const App = () => {
         trackColor={{ false: "#767577", true: "#81b0ff" }}
         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
+        onValueChange={toggleSwitch2}
         value={isEnabled}/>
-      <Text style={styles.acionamentos}>Arcondicionado</Text>
+      <Text style={styles.acionamentos}>Ar-condicionado</Text>
       <Switch
         style={styles.botao}
         trackColor={{ false: "#767577", true: "#81b0ff" }}
         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
+        onValueChange={toggleSwitch3}
         value={isEnabled}/>
-      <Text style={styles.acionamentos}>Café</Text>
+      <Text style={styles.acionamentos}>Cafeteira</Text>
       <Switch
         style={styles.botao}
         trackColor={{ false: "#767577", true: "#81b0ff" }}
         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
+        onValueChange={toggleSwitch4}
         value={isEnabled}/>
       </SafeAreaView>
     </SafeAreaView>
